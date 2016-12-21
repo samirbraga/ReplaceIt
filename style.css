@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* M-PORGRESSBAR STYLE */
+
+.progressBar-container {
+  height: 25px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.progressBar-container .progressBar-value-box, .progressBar-container .progressBar-text-box{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.progressBar-container .progressBar-value-box .progressBar-value {
+  height: 100%;
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: width 0.2s ease-out;
+  -moz-transition: width 0.2s ease-out;
+  -ms-transition: width 0.2s ease-out;
+  -o-transition: width 0.2s ease-out;
+  transition: width 0.2s ease-out;
+}
+.progressBar-container .progressBar-value-box .progressBar-value.striped{
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(0,0,0,0.05) 25%, rgba(0,0,0,0.05) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(0,0,0,0.05) 75%, rgba(0,0,0,0.05));
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(0,0,0,0.05) 25%, rgba(0,0,0,0.05) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(0,0,0,0.05) 75%, rgba(0,0,0,0.05));
+  background-size: 60px 60px;
+}
+
+.progressBar-container .progressBar-text-box .progressBar-text {
+  position: absolute;
+  right: 0;
+  font-size: 1em;
+  color: #fff;
+  height: 100%;
+  line-height: 150%;
+  padding: 0 10px;
+  font-family: 'Century Gothic', sans-serif;
+  font-weight: bold;
+  -webkit-transition: right 0.2s ease-out;
+  -moz-transition: right 0.2s ease-out;
+  -ms-transition: right 0.2s ease-out;
+  -o-transition: right 0.2s ease-out;
+  transition: right 0.2s ease-out;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}
+.progressBar-container .progressBar-text-box .progressBar-text.center{
+  right: 50%;
+  -webkit-transform: translateX(50%);
+  -moz-transform: translateX(50%);
+  -ms-transform: translateX(50%);
+  -o-transform: translateX(50%);
+  transform: translateX(50%);
+}
+
+/* M-PROGRESSLINE STYLE */
+
+.progressLine-container {
+  height: 30px;
+  width: 100%;
+  position: relative;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -o-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+}
+
+.progressLine-container .progressLine-line {
+  height: 3px;
+  width: calc(100% - 30px);
+  margin: auto;
+  background: #ccc;
+  position: relative;
+  z-index: 1;
+}
+
+.progressLine-container .progressLine-line .progressLine-line-done {
+  height: 100%;
+  -webkit-transition: background 0.2s ease-in, width 0.2s ease-in;
+  -moz-transition: background 0.2s ease-in, width 0.2s ease-in;
+  -ms-transition: background 0.2s ease-in, width 0.2s ease-in;
+  -o-transition: background 0.2s ease-in, width 0.2s ease-in;
+  transition: background 0.2s ease-in, width 0.2s ease-in;
+}
+
+.progressLine-container .progressLine-markers {
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -o-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.progressLine-container .progressLine-markers .progressLine-marker {
+  height: 25px;
+  width: 25px;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
+  background: #ccc;
+  text-align: center;
+  line-height: 21px;
+  z-index: 100;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.7em;
+  font-family: "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  -webkit-transition: background 0.2s ease-in, width 0.2s ease-in, height 0.2s ease-in, line-height 0.2s ease-in, font-size 0.2s ease-in, margin 0.2s ease-in;
+  -moz-transition: background 0.2s ease-in, width 0.2s ease-in, height 0.2s ease-in, line-height 0.2s ease-in, font-size 0.2s ease-in, margin 0.2s ease-in;
+  -ms-transition: background 0.2s ease-in, width 0.2s ease-in, height 0.2s ease-in, line-height 0.2s ease-in, font-size 0.2s ease-in, margin 0.2s ease-in;
+  -o-transition: background 0.2s ease-in, width 0.2s ease-in, height 0.2s ease-in, line-height 0.2s ease-in, font-size 0.2s ease-in, margin 0.2s ease-in;
+  transition: background 0.2s ease-in, width 0.2s ease-in, height 0.2s ease-in, line-height 0.2s ease-in, font-size 0.2s ease-in, margin 0.2s ease-in;
+  border: 2px solid #fff;
+  vertical-align: middle;
+  margin: 3px;
+}
+.progressLine-container .progressLine-markers .progressLine-marker.passed {
+  height: 30px;
+  width: 30px;
+  line-height: 26px;
+  color: #fff;
+  font-size: 0.9em;
+  margin: 0;
+}
+
